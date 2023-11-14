@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  include includes/head.pug
+  body
+    include includes/header.pug
+    main.container.mt-5.p-5
+      .card.text-center
+        .card-body.border.border-dark.p-5
+          em.h2.card-title= movie.title
+          p(style="font-size: 18px;").p-3.card-text
+            b Año:
+            |  #{movie.year}
+          p(style="font-size: 18px;").p-3.card-text
+            b Director:
+            |  #{movie.director}
+          p(style="font-size: 18px;").p-3.card-text
+            b Sinopsis:
+            |  #{movie.sinopsis}
+    include includes/footer.pug

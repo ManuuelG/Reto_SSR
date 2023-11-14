@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+  include includes/head.pug
+  body
+    include includes/header.pug
+    main.container-fluid.mt-5
+      h2.text-center= title
+      each movie in movies
+        .container.border.border-dark.p-3.mb-3
+          ul.list-group.list-group-flush.text-center
+            li.list-group-item
+              a(href="/movie/" + movie._id, class="text-decoration-none text-dark d-flex justify-content-between align-items-center")
+                em.h5.mb-0= movie.title
+                i.fas.fa-search
+    include includes/footer.pug
